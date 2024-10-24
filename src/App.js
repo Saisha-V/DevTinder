@@ -6,6 +6,10 @@ app.use("/", (req, res) => {
   res.send("Hey <3");
 });
 
+app.use("/spanish", (req, res) => {
+  res.send("Spanish <3");
+});
+
 app.use("/test", (req, res) => {
   res.send("I love you 3000 <3");
 });
