@@ -2,10 +2,6 @@ const express = require("express");
 
 const app = express();
 
-app.use("/", (req, res) => {
-  res.send("Yellooo <3");
-});
-
 app.use("/test", (req, res) => {
   res.send("I love you 3000 <3");
 });
