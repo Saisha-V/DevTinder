@@ -2,10 +2,6 @@ const express = require("express");
 
 const app = express();
 
-app.use("/", (req, res) => {
-  res.send("Hey <3");
-});
-
 app.use("/spanish", (req, res) => {
   res.send("Spanish <3");
 });
