@@ -2,12 +2,20 @@ const express = require("express");
 
 const app = express();
 
-app.use("/test", (req, res) => {
-  res.send("I love you 3000 <3");
+const { userAuth } = require("./middlewares/auth");
+
+app.use("/admin", userAuth);
+
+app.use("/user", (req, res) => {
+  res.send("User exists");
 });
 
-app.use("/hello", (req, res) => {
-  res.send("Hello <3");
+app.get("/admin/getData", (req, res) => {
+  res.send("Data sent");
+});
+
+app.get("/admin/deleteData", (req, res) => {
+  res.send("User deleted");
 });
 
 app.listen(3000, () => {
